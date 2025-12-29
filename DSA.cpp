@@ -1,35 +1,15 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-    bool isPrime(int n){
-        if (n<=1)
-            return false;
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0)
-                return false;
-        }
-return true;
-    }
-void findPrimes(int l, int r) {
-        bool found = false;
-        for (int i = l; i <= r; i++) {
-            if (isPrime(i)) {
-                cout << i<< endl;
-                found = true;
-
-            }
-        }
-        if (!found) {
-            printf(
-                "No prime numbers found in the given range.");
-        }
-    }
 int main() {
-        int l = 10, r = 30;
+    vector<int> vec = {1, 2, 3, 4, 5}   ;
+    vector<int>::iterator it;
+    for (it = vec.begin(); it != vec.end(); ++it) {
+        cout << *(it) << endl;
 
-        findPrimes(l, r);
-
-        return 0;
     }
-
+    cout << endl;
+    return 0;
+}
 
