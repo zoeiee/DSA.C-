@@ -1,15 +1,21 @@
 #include <iostream>
-#include <vector>
 using namespace std;
-
 int main() {
-    vector<int> vec = {1, 2, 3, 4, 5}   ;
-    vector<int>::iterator it;
-    for (it = vec.begin(); it != vec.end(); ++it) {
-        cout << *(it) << endl;
-
+    char c;
+    cout << "Enter a character: ";
+    cin >> c;
+    if (c >= 'a' && c <= 'z') {
+        cout << "Lowercase";
     }
-    cout << endl;
-    return 0;
+    else if (c >= 'A' && c <= 'Z') {
+        cout << "Uppercase";
+    }
+    else if ( c >= '0' && c <= '9') {
+        cout << "Digits";
+    }
+    else {
+        cout << "Special character";
+    }
+
 }
 
