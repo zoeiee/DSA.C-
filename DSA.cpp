@@ -1,16 +1,26 @@
 #include <iostream>
 using namespace std;
+
 int main() {
-    int n;
-    cout << "Enter n: ";
-    cin >> n;
-    for (int i = 0; i * i <= n; i++) {
-        if (i*i == n) {
-            cout << n<< "is a perfect square";
+    string pwd;
+    cout << "Enter password: ";
+    cin >> pwd;
+    bool valid = pwd.length() >= 8;
+    bool digit = false;
+    for (char c : pwd) {
+        for (char c : pwd) {
+            if (c >= '0' && c <= '9') {
+                digit = true;
+                break;
+            }
         }
 
+        if (valid && digit)
+            cout << "Password is valid\n";
+        else
+            cout << "Password is invalid\n";
 
+        return 0;
     }
-    cout << "not a perfect square";
-    return 0;
+
 }
