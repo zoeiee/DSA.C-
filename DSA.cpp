@@ -2,9 +2,18 @@
 using namespace std;
 
 int main() {
-    int n = 5;
-    for (int i = 1; i <= 10; i++){
-        cout << n * i << endl;
+    int n;
+    cin >> n;
+
+    int product = 1;
+
+    while (n > 0) {
+        int digit = n % 10;
+        product *= digit;
+        n /= 10;
     }
+
+    cout << product;
     return 0;
 }
+
