@@ -2,18 +2,21 @@
 using namespace std;
 
 int main() {
-    int n;
+    int n, temp, sum = 0, r;
     cin >> n;
+    temp = n;
 
-    int product = 1;
-
-    while (n > 0) {
-        int digit = n % 10;
-        product *= digit;
-        n /= 10;
+    while (temp != 0) {
+        r = temp % 10;
+        sum += r * r * r;
+        temp /= 10;
     }
 
-    cout << product;
+    if (sum == n)
+        cout << "Armstrong";
+    else
+        cout << "Not Armstrong";
+
     return 0;
 }
 
