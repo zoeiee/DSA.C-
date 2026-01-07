@@ -2,12 +2,21 @@
 using namespace std;
 
 int main() {
-    int n = 666;
-    int sum = 0;
-    while (n != 0) {
-        int digit = n % 10;
-        sum += digit;
-        n = n / 10;
+    int n, k;
+    cin >> n;
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    cout << sum;
+
+    cin >> k;  // given value
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > k) {
+            cout << arr[i] << " ";
+        }
+    }
+
+    return 0;
 }
