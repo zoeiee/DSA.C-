@@ -2,21 +2,15 @@
 using namespace std;
 
 int main() {
-    int n, k;
+    int n, sum = 0;
     cin >> n;
 
     int arr[n];
-    for (int i = 0; i < n; i++) {
+    for(int i = 0; i < n; i++) {
         cin >> arr[i];
+        sum += arr[i];
     }
 
-    cin >> k;  // given value
-
-    for (int i = 0; i < n; i++) {
-        if (arr[i] > k) {
-            cout << arr[i] << " ";
-        }
-    }
-
+    cout << (float)sum / n;
     return 0;
 }
