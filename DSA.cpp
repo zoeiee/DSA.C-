@@ -1,23 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int isPrime(int x) {
-    if(x < 2) return 0;
-    for(int i = 2; i * i <= x; i++)
-        if(x % i == 0) return 0;
-    return 1;
-}
-
 int main() {
-    int n, count = 0;
+    int n;
     cin >> n;
     int a[n];
 
-    for(int i = 0; i < n; i++) {
-        cin >> a[i];
-        if(isPrime(a[i])) count++;
+    for(int i=0;i<n;i++) cin >> a[i];
+
+    for(int i=0;i<n/2;i++){
+        int temp = a[i];
+        a[i] = a[n-1-i];
+        a[n-1-i] = temp;
     }
 
-    cout << count;
+    for(int i=0;i<n;i++)
+        cout << a[i] << " ";
+
     return 0;
 }
+
