@@ -1,22 +1,21 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
-    int n;
+    int n, count = 0;
     cin >> n;
+
     int a[n];
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
 
-    for(int i=0;i<n;i++) cin >> a[i];
-
-    for(int i=0;i<n/2;i++){
-        int temp = a[i];
-        a[i] = a[n-1-i];
-        a[n-1-i] = temp;
+    for (int i = 0; i < n; i++) {
+        int r = sqrt(a[i]);
+        if (r * r == a[i])
+            count++;
     }
 
-    for(int i=0;i<n;i++)
-        cout << a[i] << " ";
-
+    cout << count;
     return 0;
 }
-
