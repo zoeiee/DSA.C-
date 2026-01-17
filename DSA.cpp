@@ -63,3 +63,37 @@ int main() {
     return 0;
 }*/
 
+/*#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Enter element ";
+        cin >> arr[i];
+    }
+
+    // Bubble Sort
+    for (int i = 0; i < n - 1; i++) {          // Number of passes
+        for (int j = 0; j < n - i - 1; j++) {  // Compare adjacent elements
+            if (arr[j] > arr[j + 1]) {        // If left > right, swap
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    // Print sorted array
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}*/
+
+
