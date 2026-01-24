@@ -128,7 +128,7 @@ return 0;
 
 }*/
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
@@ -184,4 +184,18 @@ int main() {
         cout << arr[i] << " ";
     }
 
+}*/
+
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[5] = {45,89, 32,12, 8};
+    int largest = arr[0];
+    for (int i = 1; i < 5; i++) {
+        if (arr[i]> arr[0]) {
+            largest = arr[i];
+        }
+    }
+    cout << largest; //optimal approach
 }
+
